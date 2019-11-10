@@ -5,7 +5,9 @@ import Button from '@material-ui/core/Button';
 import './LoginForm.css';
 
 
-
+/**
+ * @description make a simple login with redux-form
+ */
 class LoginForm extends Component {
   
     renderField = (field) => (
@@ -15,9 +17,11 @@ class LoginForm extends Component {
           </div>    
         </div>
       )
-
+      /**
+       * @description signin button
+       */
       onSubmit = (values) => {
-            // simulate server latency
+            // simple username and password for login----> admin admin
             if (!['admin'].includes(values.username)) {
               throw new SubmissionError({
                 username: 'User does not exist',
@@ -30,7 +34,7 @@ class LoginForm extends Component {
               })
             } else {
               window.alert(`You submitted:\n\n${JSON.stringify(values, null, 2)}`);
-        this.props.history.push('/asanshahr');
+              this.props.history.push('/asanshahr');
     
             }
         }

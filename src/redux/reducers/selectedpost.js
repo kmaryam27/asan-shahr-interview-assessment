@@ -3,6 +3,11 @@ const INITIAL_STATE = {
   isopen: false
 }
 
+/**
+ * @description dashboardReducer for get the API data
+ * @param {*} state 
+ * @param {*} action 
+ */
 const selectedPostReducer = (state = INITIAL_STATE, action) => {
     switch(action.type){
         case 'SELECTEDPOST':
